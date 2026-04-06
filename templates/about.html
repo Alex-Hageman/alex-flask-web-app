@@ -1,18 +1,61 @@
 {% extends "base.html" %} 
 
 {% block title %} About digital Product Management{% endblock %}
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand">Brand</a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarCollapse"
+      >
+        <div class="navbar-nav">
+          <a href="#home" class="nav-item nav-link active">Home</a>
+          <a href="#profile" class="nav-item nav-link">Profile</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Messages</a
+            >
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Inbox</a>
+              <a href="#" class="dropdown-item">Sent</a>
+              <a href="#" class="dropdown-item">Drafts</a>
+            </div>
+          </div>
+        </div>
+        <form class="d-flex" method="POST">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" />
+            <button
+              type="button"
+              class="btn btn-warning"
+              formaction="/search"
+            >
+              <i class="bi-search">Search</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
 {% block body %} 
 
     <h2>About Me</h2>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus, iste ea cumque et
-        placeat non vero, veritatis quis quia minima, quod fuga! Sequi necessitatibus at ab aliquid
-        voluptatem illo.</p>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus, iste ea cumque et
-            placeat non vero, veritatis quis quia minima, quod fuga! Sequi necessitatibus at ab aliquid
-            voluptatem illo.</p>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus, iste ea cumque et
-                placeat non vero, veritatis quis quia minima, quod fuga! Sequi necessitatibus at ab aliquid
-                voluptatem illo.</p>
+    
+    
+    
+    <p>I am a dedicated fitness enthusiast who thrives on challenging workouts to maintain a peak physique.</p>
+    <p>As a Business Analytics and Information Systems major, I am passionate about leveraging data to solve complex problems.</p>
+    <p>When I'm not studying or training, you can find me enjoying live music or soaking up the sun outdoors during the summer.</p>
 
 {% endblock %}
