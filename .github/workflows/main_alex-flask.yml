@@ -9,34 +9,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  # ... (top of file remains the same)
 
-    steps:
-      # Change from @v4 to @v4.2.0 (or check for v5 if available)
-      - uses: actions/checkout@v4.2.0 
-
-      # Change from @v5 to @v5.1.0 (or higher)
-      - name: Set up Python version
-        uses: actions/setup-python@v5.1.0 
-        with:
-          python-version: '3.13'
-
-      # ... (middle of file remains the same)
-
-  deploy:
-    # ... 
-    steps:
-      # Change from @v4 to @v4.1.0 (or higher)
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4.1.0
-        with:
-          name: python-app
-      
-      # Change from @v3 to @v4 (if available) or check latest v3 patch
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3.0.1
 jobs:
   build:
     runs-on: ubuntu-latest
